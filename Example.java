@@ -369,12 +369,7 @@ class Example{
 				System.out.println("\n\tThere is no matching name or phone number...");
 			}else{
 				//--------matching contact found-------//
-				System.out.printf("\n\n\tContact ID\t\t: %s", contactArray[search(query)].getContactId());
-				System.out.printf("\n\tName\t\t\t: %s", contactArray[search(query)].getName());
-				System.out.printf("\n\tPhone Number\t\t: %s", contactArray[search(query)].getPhoneNumber());
-				System.out.printf("\n\tCompany Name\t\t: %s", contactArray[search(query)].getCompanyName());
-				System.out.printf("\n\tSalary\t\t\t: %s", contactArray[search(query)].getSalary());
-				System.out.printf("\n\tB'Day(YYYY-MM-DD)\t: %s", contactArray[search(query)].getBirthDay());
+				printArray(query);
 				System.out.println("\n\n");
 				
 				L1:while(true){
@@ -608,12 +603,7 @@ class Example{
 				System.out.printf("\n\tNo contacts found for %s...", query);
 			}else{
 				//------matching contact found------//
-				System.out.printf("\n\n\tContact ID\t\t: %s", contactArray[search(query)].getContactId());
-				System.out.printf("\n\tName\t\t\t: %s", contactArray[search(query)].getName());
-				System.out.printf("\n\tPhone Number\t\t: %s", contactArray[search(query)].getPhoneNumber());
-				System.out.printf("\n\tCompany Name\t\t: %s", contactArray[search(query)].getCompanyName());
-				System.out.printf("\n\tSalary\t\t\t: %s", contactArray[search(query)].getSalary());
-				System.out.printf("\n\tB'Day(YYYY-MM-DD)\t: %s", contactArray[search(query)].getBirthDay());
+				printArray(query);
 				
 				System.out.print("\n\n  Do you want to delete this contact (Y/N): ");
 				char ch = input.next().charAt(0);
@@ -688,12 +678,7 @@ class Example{
 			}else{
 				//------matching contact found------//
 				//------show matching contacts------//
-				System.out.printf("\n\n\tContact ID\t\t: %s", contactArray[search(query)].getContactId());
-				System.out.printf("\n\tName\t\t\t: %s", contactArray[search(query)].getName());
-				System.out.printf("\n\tPhone Number\t\t: %s", contactArray[search(query)].getPhoneNumber());
-				System.out.printf("\n\tCompany Name\t\t: %s", contactArray[search(query)].getCompanyName());
-				System.out.printf("\n\tSalary\t\t\t: %s", contactArray[search(query)].getSalary());
-				System.out.printf("\n\tB'Day(YYYY-MM-DD)\t: %s", contactArray[search(query)].getBirthDay());
+				printArray(query);
 			}
 			
 			System.out.print("\n\n  Do you want to search another contact(Y/N): ");
@@ -944,6 +929,16 @@ class Example{
             }
         }
     }
+    
+    //----------------print array-------------------//
+    public static void printArray(String query){
+		System.out.printf("\n\n\tContact ID\t\t: %s", contactArray[search(query)].getContactId());
+		System.out.printf("\n\tName\t\t\t: %s", contactArray[search(query)].getName());
+		System.out.printf("\n\tPhone Number\t\t: %s", contactArray[search(query)].getPhoneNumber());
+		System.out.printf("\n\tCompany Name\t\t: %s", contactArray[search(query)].getCompanyName());
+		System.out.printf("\n\tSalary\t\t\t: %s", contactArray[search(query)].getSalary());
+		System.out.printf("\n\tB'Day(YYYY-MM-DD)\t: %s", contactArray[search(query)].getBirthDay());
+	}
 
 	//----------------print contacts table-------------------//
 	public static void printTable(String str){

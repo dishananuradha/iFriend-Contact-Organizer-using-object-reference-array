@@ -932,12 +932,14 @@ class Example{
     
     //----------------print contact info-------------------//
     public static void printContactInfo(String query){
-		System.out.printf("\n\n\tContact ID\t\t: %s", contactArray[search(query)].getContactId());
-		System.out.printf("\n\tName\t\t\t: %s", contactArray[search(query)].getName());
-		System.out.printf("\n\tPhone Number\t\t: %s", contactArray[search(query)].getPhoneNumber());
-		System.out.printf("\n\tCompany Name\t\t: %s", contactArray[search(query)].getCompanyName());
-		System.out.printf("\n\tSalary\t\t\t: %s", contactArray[search(query)].getSalary());
-		System.out.printf("\n\tB'Day(YYYY-MM-DD)\t: %s", contactArray[search(query)].getBirthDay());
+		
+		Contact contact = contactArray[search(query)];
+		System.out.printf("\n\n\tContact ID\t\t: %s", contact.getContactId());
+		System.out.printf("\n\tName\t\t\t: %s", contact.getName());
+		System.out.printf("\n\tPhone Number\t\t: %s", contact.getPhoneNumber());
+		System.out.printf("\n\tCompany Name\t\t: %s", contact.getCompanyName());
+		System.out.printf("\n\tSalary\t\t\t: %s", contact.getSalary());
+		System.out.printf("\n\tB'Day(YYYY-MM-DD)\t: %s", contact.getBirthDay());
 	}
 
 	//----------------print contacts table-------------------//

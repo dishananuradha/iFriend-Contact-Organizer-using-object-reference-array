@@ -4,7 +4,6 @@ import java.time.format.DateTimeParseException;
 import java.util.regex.*;
 
 class Contact{
-	
 	private String contactId;
 	private String name;
 	private String phoneNumber;
@@ -66,7 +65,6 @@ class Example{
 		Scanner input = new Scanner(System.in);
 		
 		while(true){
-			
 			System.out.println("\n");
 			System.out.println("            /$$ /$$$$$$$$ /$$$$$$$  /$$$$$$ /$$$$$$$$ /$$   /$$ /$$$$$$$");
 			System.out.println("           |__/| $$_____/| $$__  $$|_  $$_/| $$_____/| $$$ | $$| $$__  $$");
@@ -820,7 +818,6 @@ class Example{
     
     //-------------------extend arrays----------------------//
     public static void extendArray() {
-		
 		Contact[] tempContactArray = new Contact[contactArray.length + 1];
 		
 		for(int i = 0; i < contactArray.length; i++){
@@ -831,7 +828,6 @@ class Example{
    
     //-------------------delete elements----------------------//
     public static void deleteElements(int x) {
-		
 		Contact[] tempContactArray = new Contact[contactArray.length - 1];
 		
 		sortByContactId();
@@ -853,7 +849,6 @@ class Example{
     
     //-------------------search name or phone number existance----------------------//
     public static int search(String query){
-		
 		sortByContactId();
 		
 		for(int i = 0; i < contactArray.length; i++){
@@ -932,8 +927,8 @@ class Example{
     
     //----------------print contact info-------------------//
     public static void printContactInfo(String query){
-		
 		Contact contact = contactArray[search(query)];
+		
 		System.out.printf("\n\n\tContact ID\t\t: %s", contact.getContactId());
 		System.out.printf("\n\tName\t\t\t: %s", contact.getName());
 		System.out.printf("\n\tPhone Number\t\t: %s", contact.getPhoneNumber());

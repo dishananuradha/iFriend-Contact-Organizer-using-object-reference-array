@@ -608,7 +608,7 @@ class Example{
 				
 				if(ch == 'Y' || ch == 'y'){
 
-					deleteElements(search(query));    //delete the element
+					delete(search(query));    //delete the contact
 					System.out.println("\n\tContact has been deleted successfully...");
 
 				}else if(ch == 'N' || ch == 'n'){
@@ -826,8 +826,8 @@ class Example{
 		contactArray = tempContactArray;
     }
    
-    //-------------------delete elements----------------------//
-    public static void deleteElements(int x) {
+    //-------------------delete contacts---------------------//
+    public static void delete(int x) {
 		Contact[] tempContactArray = new Contact[contactArray.length - 1];
 		
 		sortByContactId();
